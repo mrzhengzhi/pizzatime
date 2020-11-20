@@ -5,7 +5,7 @@ PizzaTime API is able to handle queries for single orders as well as bulk orders
 
 
 ## Endpoints
-PizzaTime API has two simple GET requests: https://pizzatime.org/json will provide either single order delivery information or bulk order delivery information based on your given parameters.
+PizzaTime API has two simple GET requests: https://pizzatime.org/json will provide either **single order delivery information** or **bulk order delivery information** based on your given parameters.
 
 
 ## Parameters
