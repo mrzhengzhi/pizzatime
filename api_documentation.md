@@ -37,18 +37,18 @@ Results for single orders:
 {
   "results":
     {
-      "restaurantName"
-      "eta"
-      "menu"
-      "contactInfo"
-      "closingTime"
+      "restaurantName":"Pizza Square"
+      "eta":"25 mins"
+      "menu":
+      "contactInfo":"(204)-615-1991"
+      "closingTime":"Till 11 PM on Weekdays and till Midnight on weekends"
     },
     {
-      "restaurantName"
-      "eta"
+      "restaurantName":"Bulldog Pizza"
+      "eta":"30 mins"
       "menu"
-      "contactInfo"
-      "closingTime"
+      "contactInfo":"(204)-586-1234"
+      "closingTime":"Till 2 AM on Weekdays and till 3 AM on weekends"
     }
 }
 ```
@@ -57,11 +57,11 @@ Results for bulk orders:
 {
   "results":
     {
-      "restaurantName"
-      "eta"
+      "restaurantName":'Pizzaland'
+      "eta":"60-75 mins"
       "menu"
-      "contactInfo"
-      "closingTime"
+      "contactInfo":"(204)-336-3333"
+      "closingTime":"Till Midnight on Weekdays and till 2 AM on weekends"
     }
 }
 ```
