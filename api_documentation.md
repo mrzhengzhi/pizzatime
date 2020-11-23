@@ -9,11 +9,11 @@ PizzaTime API has two simple GET requests: https://pizzatime.org/json will provi
 
 
 ## Parameters
-For single orders:
+1.For single orders:
   * **postCode** (string): Postal code, formatted without spaces. Not case-sensitive. Required.
   * **maxMins** (int): Maximum acceptible waiting time in minutes. Required.
   
-For bulk orders:
+2.For bulk orders:
   * **postCode** (string): Postal code, formatted without spaces. Not case-sensitive. Required.
   * **deliverDate** (string): Delivery date in YYYY-MM-DD. Required.
 
