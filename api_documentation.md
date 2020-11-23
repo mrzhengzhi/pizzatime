@@ -39,7 +39,6 @@ Results for single orders:
     {
       "restaurantName":"Pizza Square"
       "eta":"25 mins"
-      "menu":
       "contactInfo":"(204)-615-1991"
       "closingTime":"Till 11 PM on Weekdays and till Midnight on weekends"
     },
