@@ -46,7 +46,6 @@ Results for single orders:
     {
       "restaurantName":"Bulldog Pizza"
       "eta":"30 mins"
-      "menu"
       "contactInfo":"(204)-586-1234"
       "closingTime":"Till 2 AM on Weekdays and till 3 AM on weekends"
     }
@@ -59,7 +58,6 @@ Results for bulk orders:
     {
       "restaurantName":'Pizzaland'
       "eta":"60-75 mins"
-      "menu"
       "contactInfo":"(204)-336-3333"
       "closingTime":"Till Midnight on Weekdays and till 2 AM on weekends"
     }
