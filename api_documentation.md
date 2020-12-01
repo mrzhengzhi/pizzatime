@@ -31,14 +31,14 @@ The response of our API contains the restaurant name, it's ETA for delivering pi
   "results":
     {
       "restaurantName":"Pizza Square"
-      "eta":"25 mins"
+      "maxMins":25
       "maxPrice":25
       "contactInfo":"(204)-615-1991"
       "closingTime":"Till 11 PM on Weekdays and till Midnight on weekends"
     },
     {
       "restaurantName":"Bulldog Pizza"
-      "eta":"30 mins"
+      "maxMins":30
       "maxPrice":50
       "contactInfo":"(204)-586-1234"
       "closingTime":"Till 2 AM on Weekdays and till 3 AM on weekends"
