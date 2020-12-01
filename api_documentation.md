@@ -1,37 +1,30 @@
 # PizzaTime API
 
-This is an API that conveniently provides contact information, menus, open hours, and delivery times of nearby local pizza joints, based on your given postal code.  
-PizzaTime API is able to handle queries for single orders as well as bulk orders, provided the right parameters.
+This is an API that conveniently provides contact information, menus, open hours, and delivery times of nearby local pizza joints, based on your given postal code information, among other additional parameters.
 
 
-## Endpoints
-PizzaTime API has two simple GET requests: https://pizzatime.org/json will provide either **single order delivery information** or **bulk order delivery information** based on your given parameters.
+## Endpoint
+We have a single endpoint: 
+```GET /restaurants``` with our URL ```https://www.pizzatime.org/``` will access pizza joints according to your provided postal code, and can be further tuned with the use of the additional provided parameters.
 
 
 ## Parameters
-1. For single orders:
-  * **postCode** (string): Postal code, formatted without spaces. Not case-sensitive. Required.
-  * **maxMins** (int): Maximum acceptible waiting time in minutes. Required.
-  
-2. For bulk orders:
-  * **postCode** (string): Postal code, formatted without spaces. Not case-sensitive. Required.
-  * **deliverDate** (string): Delivery date in YYYY-MM-DD. Required.
+  + **postCode** (string): Postal code, formatted without spaces. Not case-sensitive. Required.
+  + **maxMins** (int): Maximum acceptable waiting time in minutes. Optional
+  + **maxPrice** (int):  Maximum acceptable price for a standard pizza. Optional.
+ 
 
 ## Sample requests
-These are two sample requests for getting pizza joint information from our API from a given location.
-
-Single order: 
+These are a handful of sample requests that you can use to query your results and find pizza joints near you:
 ```
-https://pizzatime.org/json?postCode=r3t3m2&maxMins=20
-```
-Bulk order:
-```
-https://pizzatime.org/json?postCode=r3t3m2&deliverdate=2020-11-11
+  https://www.pizzatime.org/restaurants?postCode="R3T3M2"
+  https://www.pizzatime.org/restaurants?postCode="R3T3M2"&maxMins=10
+  https://www.pizzatime.org/restaurants?postCode="R3T3M2"&maxPrice=20
+  https://www.pizzatime.org/restaurants?postCode="R3T3M2"&maxPrice=20&maxMins=10
 ```
 
 ## Sample Responses
-
-Results for single orders:
+The response of our API contains the restaurant name, it's ETA for delivering pizza, it's contact info, as well as it's closing time, all of which is taken from the pizza joints' hosted information.
 
 ```
 {
@@ -39,26 +32,16 @@ Results for single orders:
     {
       "restaurantName":"Pizza Square"
       "eta":"25 mins"
+      "maxPrice":25
       "contactInfo":"(204)-615-1991"
       "closingTime":"Till 11 PM on Weekdays and till Midnight on weekends"
     },
     {
       "restaurantName":"Bulldog Pizza"
       "eta":"30 mins"
+      "maxPrice":50
       "contactInfo":"(204)-586-1234"
       "closingTime":"Till 2 AM on Weekdays and till 3 AM on weekends"
-    }
-}
-```
-Results for bulk orders:
-```
-{
-  "results":
-    {
-      "restaurantName":'Pizzaland'
-      "eta":"60-75 mins"
-      "contactInfo":"(204)-336-3333"
-      "closingTime":"Till Midnight on Weekdays and till 2 AM on weekends"
     }
 }
 ```
